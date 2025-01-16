@@ -24,8 +24,9 @@ export default InputFocus;
 
 ```jsx
 const inputRef = useRef(null);
-useRef создает объект { current: null }, где current будет хранить ссылку на DOM-элемент.
 ```
+*useRef* создает объект { current: null }, где current будет хранить ссылку на DOM-элемент.
+
 Привязка ссылки к элементу:
 ```jsx
 <input ref={inputRef} type="text" placeholder="Введите текст" />
@@ -47,6 +48,11 @@ const prevCountRef = useRef();
 useEffect(() => {
     prevCountRef.current = count;
 }, [count]);
+```
+Получение значения рефа:
+
+```jsx
+console.log(myRef.current); // Получение значения рефа
 ```
 
 ___
